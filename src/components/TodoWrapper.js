@@ -19,6 +19,10 @@ function TodoWrapper() {
     setTodos(todos.filter((todo) => todo.id !== id));
   }
 
+  function deleteAll(){
+    setTodos([]);
+  }
+
   function editTodo(id) {
     setTodos(
       todos.map((todo) =>
@@ -51,6 +55,7 @@ function TodoWrapper() {
           />
         )
       )}
+      <button className="todo-btn" onClick={deleteAll}>Delete All</button>
     </div>
   );
 }
